@@ -1,0 +1,28 @@
+{% load static %}
+<html>
+    <head>
+    <titile>WORKER LOGIN</titile>
+    </head>
+    <body>
+        <link rel="stylesheet" type="text/css" href="{% static 'home/worker.css' %}">
+        <div class="loginbox">
+            <img src="{% static 'home/login.jpeg'%}" class="login">
+            <H1 ALIGN="CENTER">WORKER LOGIN</H1>
+            <form action="#" method="post">
+                {% csrf_token %}
+                <div class="form_input"><br>
+                User Name:<input type="text" name="txtUName" placeholder="Enter your username">
+                </div><br>
+                <div class="form_input">
+                Password<input type="password" name="pwd" placeholder="Enter your password">
+                </div><br>
+                <input type="submit" name="submit" value="LOGIN" class="btn" >
+            </form><br>
+        
+            <div class="button">
+              <center>  <a href="{% url 'index' %}" class="btn"> BACK TO FRONT PAGE</a></center>
+            </div>
+        </div>
+       
+    </body>
+</html>
